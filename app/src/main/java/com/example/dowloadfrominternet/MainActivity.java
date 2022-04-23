@@ -36,14 +36,14 @@ public class MainActivity extends AppCompatActivity {
         binding.spinner.setAdapter(adapter);
 
         dialog = new ProgressDialog(this);
-        dialog.setMessage("Please wait...");
+        dialog.setMessage("...");
         dialog.setCancelable(false);
 
         binding.getSource.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 if (binding.URL.getText().toString().trim().isEmpty()) {
-                    Toast.makeText(MainActivity.this, "URL is empty!", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(MainActivity.this, "URL Trống", Toast.LENGTH_SHORT).show();
                     return;
                 }
 
@@ -103,9 +103,9 @@ public class MainActivity extends AppCompatActivity {
                     ex.getMessage().contains("not permitted")) {
                 return "Cleartext HTTP traffic not permitted.\nPlease change to HTTPS!";
             } else if (ex.getMessage().contains("Unable to resolve host")) {
-                return "No address associated with hostname.\nPlease try another URL again!";
+                return "Địa chỉ URL ko hợp lệ .\nHãy thử cái khác!";
             }
-            return "Some error occurred!";
+            return "Xảy ra lỗi!";
         }
     }
 }
