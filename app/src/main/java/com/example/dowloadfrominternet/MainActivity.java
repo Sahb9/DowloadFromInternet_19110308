@@ -11,6 +11,8 @@ import android.view.inputmethod.InputMethodManager;
 import android.widget.ArrayAdapter;
 import android.widget.Toast;
 
+import com.example.dowloadfrominternet.databinding.ActivityMainBinding;
+
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
